@@ -60,3 +60,7 @@
 #canvas {
     background: url(./../assets/background.png) no-repeat center center;
 }
+
+.container-navbar__left__part__soustitle {
+    cursor: pointer;
+}

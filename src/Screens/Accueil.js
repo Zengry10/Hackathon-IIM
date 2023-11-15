@@ -51,6 +51,7 @@ export default function Accueil() {
       const animation = gltf.animations[0];
 
       const animationAction = mixer.clipAction(animation);
+
       animationAction.play();
 
       // Matériel
@@ -91,11 +92,11 @@ export default function Accueil() {
         <div className='container-navbar__left'>
           <img className='container-accueil__logo' src={logo} alt="logo" />
           <div className='container-navbar__left__part'>
-            <p>Groupe</p>
-            <p>Produits et service</p>
-            <p>Carrières</p>
-            <p>Finance</p>
-            <p>Médias</p>
+            <p className='container-navbar__left__part__soustitle'>Groupe</p>
+            <p className='container-navbar__left__part__soustitle'>Produits et service</p>
+            <p className='container-navbar__left__part__soustitle'>Carrières</p>
+            <p className='container-navbar__left__part__soustitle'>Finance</p>
+            <p className='container-navbar__left__part__soustitle'>Médias</p>
           </div>
         </div>
         <div className='container-navbar__right'>
