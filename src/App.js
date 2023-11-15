@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
             {/* <Route path='/' element={<Navigate to='/client/menu'/>}></Route> */}
-            <Route path='/accueil' element={<Accueil/>}>test</Route>
+            <Route path='/CharleeAssistance' element={<Accueil/>}>test</Route>
             <Route path='/chatbot' element={<ChatBot/>}>test</Route>
           </Routes>
       </BrowserRouter>

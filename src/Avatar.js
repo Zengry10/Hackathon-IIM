@@ -1,19 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
-import '../Style/accueil.css';
-import '../assets/logo_safran.png';
-import logo from '../assets/logo_safran.png';
-import Women from '../assets/charlee_safran.png'
-import ChatBot from './Chatbot.js';
-import Avatar from '../Avatar.js'
+import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-
-export default function Accueil() {
+const Avatar = () => {
   const canvasRef = useRef();
   let scene, camera, renderer, mesh, mixer, clock;
-
-  const [isActive, setIsActive] = useState(true);
 
   useEffect(() => {
     // Initialisation
@@ -21,17 +12,14 @@ export default function Accueil() {
     camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 1000);
     renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current, antialias: true, alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    // document.body.appendChild(renderer.domElement);
+    document.body.appendChild(renderer.domElement);
     clock = new THREE.Clock();
     const loader = new GLTFLoader();
 
-    if (isActive) {
-      setIsActive(false)
-    }
-
     // Loader
-
     loader.load('anim_2.glb', (gltf) => {
+      console.log('test')
+
       mesh = gltf.scene;
 
       scene.add(mesh);
@@ -86,40 +74,8 @@ export default function Accueil() {
   }, []);
 
   return (
-    <div className='container'>
-      <nav className='container-navbar'>
-        <div className='container-navbar__left'>
-          <img className='container-accueil__logo' src={logo} alt="logo" />
-          <div className='container-navbar__left__part'>
-            <p>Groupe</p>
-            <p>Produits et service</p>
-            <p>Carrières</p>
-            <p>Finance</p>
-            <p>Médias</p>
-          </div>
-        </div>
-        <div className='container-navbar__right'>
-          <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24">
-            <g fill="none" stroke="#ffffff"  strokeWidth="1.5">
-              <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2Z"></path>
-              <path d="M4.271 18.346S6.5 15.5 12 15.5s7.73 2.846 7.73 2.846M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6Z"></path>
-            </g>
-          </svg>
-        </div>
-      </nav>
-      <div>
-        <canvas id="canvas" ref={canvasRef} />
+    <canvas id="canvas" ref={canvasRef} />
+  )
+};
 
-        <div>          
-            {/* <div className='container-women'>
-                <img src='../assets/women_speack.png' alt='avatar'/>
-            </div> */}
-            <div className='container-chatbot'>
-                <p className='container-chatbot_title'>Je suis votre assistant Charlee !</p>
-                <ChatBot />
-            </div>
-        </div>
-      </div>
-    </div>
-  );
-} 
+export default Avatar;

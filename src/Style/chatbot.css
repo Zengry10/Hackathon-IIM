@@ -1,12 +1,12 @@
 .container__chat-box{
-
-    width: 30vh;
+    width: 70vh;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5px;
     margin: 20px;
     height: 350px;
     min-width: 300px;
-}
+
+  }
 .container__chat-box__title {
     text-align: center;
     background: linear-gradient(90deg, #FE5656 0%, #FF8E8F 100%);
@@ -53,7 +53,6 @@
     margin: 0;
     height: 10px;
     border: none;
-    background-color: white;
 }
 
 .container__chat-box__container-input-button__button {
@@ -66,14 +65,18 @@
 
   .container__chat-box__container-input-button_souscontainer {
     width: 90%;
+    height: 50px;
     border: 2px solid #e9e6e6;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    background-color: white;
+    border-radius: 50px;
   }
   .buttonSend {
     cursor: pointer;
+    background-color: white;
   }
 
   .container__chat-box__soucontainer__question-container {
@@ -90,7 +93,7 @@
     border-radius: 15px;
     width: fit-content;
     margin-bottom: 10px;
-    margin-left: 80px;
+    margin-left: auto;
     height: fit-content;
   }
 
@@ -108,4 +111,33 @@
     height: 240px;
     overflow-y: scroll;
     padding: 0px 20px;
+  }
+
+  .container-microphone {
+    background-color: white;
+    border-radius: 20px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    padding: 10px 13px;
+    cursor: pointer;
+
+  }
+
+  .container-camera {
+    background-color: red;
+    border-radius: 20px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    padding: 10px 13px;
+    cursor: pointer;
+  }
+
+  .container-women {
+    margin-left: 300px;
   }
