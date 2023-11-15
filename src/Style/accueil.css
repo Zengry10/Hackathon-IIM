@@ -1,0 +1,41 @@
+.container-accueil__logo {
+    width: 250px;
+    height: 70px;
+    border-right: 2px solid white;
+}
+.container-navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #1A1C26;
+    height: 100px;
+}
+.container-navbar__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-navbar__left__part {
+    display: flex;
+    gap: 50px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.container-navbar__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.container {
+    background-color: #070E1D;
+}
+
+.container-image-principal {
+    width: 100%;
+    height: 52vh;
+}
